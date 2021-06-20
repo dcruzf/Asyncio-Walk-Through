@@ -26,7 +26,5 @@ for task in pending:
     task.cancel()
 
 group = asyncio.gather(*pending, return_exceptions=True)
-
 loop.run_until_complete(group)
-
 loop.close()
